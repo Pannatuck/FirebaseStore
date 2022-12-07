@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etUpdateAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ems="7"
+        android:hint="Update age"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/glMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateStatus" />
+
+    <EditText
+        android:id="@+id/etUpdateStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ems="7"
+        android:hint="Update status"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/glMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateNickname" />
+
+    <EditText
+        android:id="@+id/etUpdateNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ems="7"
+        android:hint="Update nickname"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/glMiddle"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <EditText
+        android:id="@+id/etNickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Nickname"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Whats happening?"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNickname" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Age"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStatus" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/glMiddle"
+        app:layout_constraintTop_toBottomOf="@id/etUpdateAge" />
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Upload"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAge" />
+
+    <Button
+        android:id="@+id/btnRetrieve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Retrieve Data"
+        app:layout_constraintEnd_toStartOf="@+id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
+
+    <Button
+        android:id="@+id/btnTransaction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Transaction"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnRetrieve"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        />
+
+
+    <EditText
+        android:id="@+id/etAgeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Start age"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/etAgeEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBatched"
+        />
+
+    <EditText
+        android:id="@+id/etAgeEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="End age"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etAgeStart"
+        app:layout_constraintTop_toBottomOf="@id/btnBatched"/>
+
+    <TextView
+        android:id="@+id/tvPersons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Person Data"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAgeStart" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="210dp" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Delete Person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdate" />
+
+    <Button
+        android:id="@+id/btnBatched"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Batched Write"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glMiddle"
+        app:layout_constraintTop_toBottomOf="@id/btnDelete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
